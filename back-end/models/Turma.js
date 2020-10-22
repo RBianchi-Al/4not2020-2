@@ -33,15 +33,9 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
-    curso: {
-        type: mongoose.ObjectId, ref: 'Curso', require: true
-    },
-    professor: {
-        type: mongoose.ObjectId, ref: 'Professor', require: true
-    },
-    sala_aula: {
-        type: mongoose.ObjectId, ref: 'SalaAula', require: true
-    }
+    curso: { type: mongoose.ObjectId, ref: 'Curso', required: true },
+    professor: { type: mongoose.ObjectId, ref: 'Professor', required: true },
+    sala_aula: { type: mongoose.ObjectId, ref: 'SalaAula', required: true }
 })
 
 /*

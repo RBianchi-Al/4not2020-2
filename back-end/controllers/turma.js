@@ -45,12 +45,16 @@ controller.novo = async (req, res) => {
 //OPERAÇÃO RETRIEVE (all), listar()
 controller.listar = async (req, res) => {
    try {
-    let dados = await Turma.find() //sem parâmetro traz tudo que estiver cadastrado, não executa curso enquanto não retornar resposta
-   res.send(dados)
+    let dados = await Turma.find()//sem parâmetro traz tudo que estiver cadastrado, não executa curso enquanto não retornar resposta
+    .populate('curso', 'nome')  //trazer apenas nome
+    .populate('professor')     ///tudo
+    .populate('sala_aula', 'nome capacidade') ///capacidade
+    res.send(dados)
     }
     catch(erro) {
         console.log(erro)
         res.status(500).send(erro)
+        
     }
 }
 
