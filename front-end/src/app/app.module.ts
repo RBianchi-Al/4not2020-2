@@ -9,6 +9,7 @@ import { MaterialModule } from './material/material.module';
 import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CursoListComponent } from './curso/curso-list/curso-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     PrincipalComponent,
     HeaderBarComponent,
     MainFooterComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    CursoListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {environment} from '../../environments'
+import {environment} from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -11,7 +11,7 @@ private apiServer = environment.apiServer
   constructor(private http: HttpClient) { }
  
   listar() {
-      return this.http.get(this.apiServer + 'curso')
+      return this.http.get(this.apiServer + 'curso').toPromise()
   }
   
 }

@@ -15,6 +15,9 @@ const dbpass = process.env.DB_PASS
 db(`mongodb+srv://${dbUser}:${dbpass}@cluster0.ylfic.gcp.mongodb.net/${dbname}?retryWrites=true&w=majority`);
 var app = express();
 
+const cors = require('cors')
+app.use(cors())
+ 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
