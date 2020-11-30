@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   template: `
      <!--app-header-bar [appName]="title"></app-header-bar-->
     <app-header-bar appName={{title}}></app-header-bar>
-
+    <div id="content">
     <router-outlet></router-outlet>
+    </div>
     <app-main-footer></app-main-footer>
   `,
   styles: []
